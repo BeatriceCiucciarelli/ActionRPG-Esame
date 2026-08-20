@@ -1,0 +1,64 @@
+# =============================================================
+# .gitignore per progetti Unity (2D Action RPG)
+# Mettere questo file nella CARTELLA PRINCIPALE del progetto Unity,
+# quella che contiene le cartelle Assets/, Packages/, ProjectSettings/
+# PRIMA del primo commit.
+# =============================================================
+
+# Cartelle generate da Unity (NON vanno committate)
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Bb]uild/
+/[Bb]uilds/
+/[Ll]ogs/
+/[Uu]ser[Ss]ettings/
+/[Mm]emoryCaptures/
+
+# Cartelle degli asset store / pacchetti scaricati (opzionale)
+/[Aa]ssets/AssetStoreTools*
+
+# File di Visual Studio / Rider / IDE
+.vs/
+.vsconfig
+.idea/
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+
+# File di build e log
+*.apk
+*.aab
+*.unitypackage
+*.app
+crashlytics-build.properties
+
+# File di sistema operativo
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# File temporanei di Unity
+sysinfo.txt
+*.stackdump
+
+# =============================================================
+# NOTA: le cartelle Assets/, Packages/ e ProjectSettings/
+# DEVONO essere committate. Non aggiungetele qui.
+# =============================================================
