@@ -11,10 +11,21 @@ public class PlayerMovement : MonoBehaviour
     public Rigidbody2D rb;
     public Animator anim;
 
+    private bool isKnockedBack;
+
+    public Player_Combat player_Combat;
+
+    private void Update() {
+        if(Input.GetButtonDown("Slash")) {
+            player_Combat.Attack();
+        }
+    }
 
     // FixedUpdate is called 50x per frame
     void FixedUpdate()
     {
+
+        if(isKnockedBack==false) {
         float horizontal = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
 
@@ -27,10 +38,24 @@ public class PlayerMovement : MonoBehaviour
         anim.SetFloat("vertical", Mathf.Abs(vertical));
 
         rb.velocity=new Vector2(horizontal, vertical) * speed;
+        }
     }
 
     void Flip() {
         facingDirection *= -1;
         transform.localScale= new Vector3 (transform.localScale.x * -1, transform.localScale.y, transform.localScale.z);
+    }
+
+    public void Knockback(Transform enemy, float force, float stunTime) {
+        isKnockedBack=true;
+        Vector2 direction=(transform.position-enemy.position).normalized;
+        rb.velocity=direction*force;
+        StartCoroutine(KnockbackCounter(stunTime));
+    }
+
+    IEnumerator KnockbackCounter(float stunTime) {
+        yield return new WaitForSeconds(stunTime);
+        rb.velocity=Vector2.zero;
+        isKnockedBack=false;
     }
 }
