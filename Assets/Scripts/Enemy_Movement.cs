@@ -26,6 +26,8 @@ public class Enemy_Movement : MonoBehaviour
 
     void Update()
     {
+
+        if(enemyState!=EnemyState.Knockback) {
         CheckForPlayer();
 
         if (attackCooldownTimer > 0)
@@ -40,6 +42,7 @@ public class Enemy_Movement : MonoBehaviour
         else if (enemyState == EnemyState.Attacking)
         {
             rb.velocity = Vector2.zero;
+        }
         }
     }
 
@@ -87,7 +90,7 @@ public class Enemy_Movement : MonoBehaviour
         }
     }
 
-    void ChangeState(EnemyState newState)
+    public void ChangeState(EnemyState newState)
     {
         // Esci dall'animazione corrente
         if (enemyState == EnemyState.Idle)
@@ -131,5 +134,6 @@ public enum EnemyState
 {
     Idle,
     Chasing,
-    Attacking
+    Attacking, 
+    Knockback
 }
