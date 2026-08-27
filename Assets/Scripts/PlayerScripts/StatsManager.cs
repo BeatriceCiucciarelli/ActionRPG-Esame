@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class StatsManager : MonoBehaviour
 {
     public static StatsManager Instance;
+    public TMP_Text healthText;
 
     [Header("Combat Stats")]
     public int damage;
@@ -27,5 +29,11 @@ public class StatsManager : MonoBehaviour
         }
         else 
             Destroy(gameObject);
+    }
+
+    public void UpDateMaxHealth(int amount)
+    {
+        maxHealth += amount;
+        healthText.text = "HP" + currentHealth + "/" + maxHealth;
     }
 }
