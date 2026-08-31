@@ -11,6 +11,7 @@ public class PlayerMovement : MonoBehaviour
     public Animator anim;
 
     private bool isKnockedBack;
+    public bool isShooting;
 
     public Player_Combat player_Combat;
 
@@ -23,20 +24,24 @@ public class PlayerMovement : MonoBehaviour
     // FixedUpdate is called 50x per frame
     void FixedUpdate()
     {
+        if(isShooting==true) {
+            rb.velocity=Vector2.zero;
+        }
 
-        if(isKnockedBack==false) {
-        float horizontal = Input.GetAxis("Horizontal");
-        float vertical = Input.GetAxis("Vertical");
+        else if(isKnockedBack==false) 
+        {
+            float horizontal = Input.GetAxis("Horizontal");
+            float vertical = Input.GetAxis("Vertical");
 
-        if(horizontal>0 && transform.localScale.x <0 ||
-           horizontal<0 && transform.localScale.x >0 ) {
-            Flip();
-           }
+            if(horizontal>0 && transform.localScale.x <0 ||
+               horizontal<0 && transform.localScale.x >0 ) {
+                Flip();
+            }
 
-        anim.SetFloat("horizontal", Mathf.Abs(horizontal));
-        anim.SetFloat("vertical", Mathf.Abs(vertical));
+            anim.SetFloat("horizontal", Mathf.Abs(horizontal));
+            anim.SetFloat("vertical", Mathf.Abs(vertical));
 
-        rb.velocity=new Vector2(horizontal, vertical) * StatsManager.Instance.speed;
+            rb.velocity=new Vector2(horizontal, vertical) * StatsManager.Instance.speed;
         }
     }
 
