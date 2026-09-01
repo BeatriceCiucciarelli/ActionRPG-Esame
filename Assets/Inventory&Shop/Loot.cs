@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,6 +10,7 @@ public class Loot : MonoBehaviour
     public Animator anim;
 
     public int quantity;
+    public static event Action<ItemSO, int> OnItemLooted;
 
     private void OnValidate() {
         if(itemSO==null) 
@@ -22,6 +24,7 @@ public class Loot : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision) {
         if(collision.CompareTag("Player")) {
             anim.Play("LootPickup");
+            OnItemLooted?.Invoke(itemSO, quantity);
             Destroy(gameObject, .5f);
         }
     }
