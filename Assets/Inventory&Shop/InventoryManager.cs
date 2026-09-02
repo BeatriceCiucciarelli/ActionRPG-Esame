@@ -7,6 +7,8 @@ using Unity.VisualScripting;
 
 public class InventoryManager : MonoBehaviour
 {
+    public GameObject lootPrefab;
+    public Transform player;
     public UseItem useItem;
     public int gold;
     public TMP_Text goldText;
@@ -41,12 +43,32 @@ private void Start()
             gold += quantity;
             goldText.text = gold.ToString();
         }
-        else
+  else{
+
+        foreach( var slot in itemSlots)
         {
+            
+            if(slot.itemSO == itemSO  && slot.quantity < itemSO.stackSize)
+            {
+                int availableSpace = itemSO.stackSize - slot.quantity;
+                int amountToAdd = Mathf.Min(availableSpace, quantity);
+
+                slot.quantity += amountToAdd;
+                quantity -= amountToAdd;
+
+                slot.UpdateUI();
+
+                if(quantity<=0)
+                return;
+            }
+        }
+        
             foreach(var slot in itemSlots)
             {
                 if( slot.itemSO == null)
                 {
+                    int  amountToAdd = Mathf.Min(itemSO.stackSize,quantity);
+
                     slot.itemSO = itemSO;
                     slot.quantity = quantity;
                      slot.UpdateUI();
@@ -54,8 +76,30 @@ private void Start()
                 }
                 
             }
+
+            if(quantity>0)
+            DropLoot(itemSO,quantity);
            
+  }
+    }
+
+public void DropItem(InventorySlot slot)
+    {
+        DropLoot(slot.itemSO, 1);
+        slot.quantity--;
+        if (slot.quantity <= 0)
+        {
+            slot.itemSO = null;
         }
+        slot.UpdateUI();
+    }
+
+
+
+    private void DropLoot(ItemSO itemSO, int quantity)
+    {
+        Loot loot = Instantiate(lootPrefab, player.position, Quaternion.identity).GetComponent<Loot>();
+        loot.Initialize(itemSO, quantity);
     }
 
      public void UseItem(InventorySlot slot)

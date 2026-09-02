@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Steak
   itemDescription: It's a steak!
-  icon: {fileID: 1004085675, guid: d608a57e22a398e4cb8e65cb2535b724, type: 3}
+  icon: {fileID: 21300000, guid: 8f597b0820356f74f9014de70ca62605, type: 3}
+  stackSize: 3
   isGold: 0
   currentHealth: 5
   maxHealth: 0
