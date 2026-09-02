@@ -11,6 +11,16 @@ public class InventoryManager : MonoBehaviour
     public TMP_Text goldText;
     public InventorySlot[] itemSlots;
 
+private void Start()
+    {
+        foreach(var slot in itemSlots)
+        {
+            slot.UpdateUI();
+        }
+    }
+
+
+
    private void OnEnable()
     {
         Loot.OnItemLooted += AddItem;
