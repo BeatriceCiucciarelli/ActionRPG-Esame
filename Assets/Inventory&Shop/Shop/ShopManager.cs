@@ -1,24 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System;
 
 public class ShopManager : MonoBehaviour
 {
-    public static event Action<ShopManager, bool> OnShopStateChanged;
-    [SerializeField] private List<ShopItems> shopItems;
+    
     [SerializeField] private ShopSlot[] shopSlots;
     [SerializeField] private InventoryManager inventoryManager;
 
-    private void Start() {
-        PopulateShopItems();
-        OnShopStateChanged?.Invoke(this, true);
-    }
 
-    public void PopulateShopItems() {
-        for (int i = 0; i < shopItems.Count && i<shopSlots.Length; i++)
+    public void PopulateShopItems(List<ShopItems> shopItems)
+    {
+        for (int i = 0; i < shopItems.Count && i < shopSlots.Length; i++)
         {
-            ShopItems shopItem=shopItems[i];
+            ShopItems shopItem = shopItems[i];
             shopSlots[i].Initialize(shopItem.itemSO, shopItem.price);
             shopSlots[i].gameObject.SetActive(true);
         }
