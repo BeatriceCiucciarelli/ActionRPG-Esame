@@ -57,6 +57,8 @@ public class ShopKeeper : MonoBehaviour
 
                     shopkeeperCam.gameObject.SetActive(false);
                 }
+
+        
             
         }
     }
