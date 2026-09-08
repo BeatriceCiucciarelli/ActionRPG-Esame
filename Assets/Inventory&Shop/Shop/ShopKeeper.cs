@@ -16,6 +16,9 @@ public class ShopKeeper : MonoBehaviour
     [SerializeField] private List<ShopItems> shopWeapons;
     [SerializeField] private List<ShopItems> shopArmour;
 
+    [SerializeField] private Camera shopkeeperCam;
+    [SerializeField] private Vector3 cameraOffset= new Vector3(0,0,-1);
+
     public ShopManager shopManager;
     private bool playerInRange;
     private bool isShopOpen;
@@ -35,6 +38,10 @@ public class ShopKeeper : MonoBehaviour
                     shopCanvasGroup.alpha=1;
                     shopCanvasGroup.blocksRaycasts=true;
                     shopCanvasGroup.interactable=true;
+
+                    shopkeeperCam.transform.position=transform.position + cameraOffset;
+                    shopkeeperCam.gameObject.SetActive(true);
+
                     OpenItemShop();
                 }
             }
@@ -47,6 +54,8 @@ public class ShopKeeper : MonoBehaviour
                     shopCanvasGroup.alpha=0;
                     shopCanvasGroup.blocksRaycasts=false;
                     shopCanvasGroup.interactable=false;
+
+                    shopkeeperCam.gameObject.SetActive(false);
                 }
             
         }
