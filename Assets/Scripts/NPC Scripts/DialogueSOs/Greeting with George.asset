@@ -19,3 +19,8 @@ MonoBehaviour:
     text: I hope you've had a great time!
   - speaker: {fileID: 0}
     text: Sure have George! Thank you.
+  options:
+  - optionText: Tell me more
+    nextDialogue: {fileID: 11400000, guid: d95a207c703b3e8489fc3cf1c46aae55, type: 2}
+  - optionText: No interested
+    nextDialogue: {fileID: 11400000, guid: 8db312edcb8b40b408999708eba47739, type: 2}
