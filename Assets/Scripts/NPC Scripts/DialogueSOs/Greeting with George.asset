@@ -17,7 +17,7 @@ MonoBehaviour:
     text: Hello, Night Runner!
   - speaker: {fileID: 11400000, guid: 027200893a7ad2841bcef7a53ac0c47b, type: 2}
     text: I hope you've had a great time!
-  - speaker: {fileID: 0}
+  - speaker: {fileID: 11400000, guid: 40b5f28c8bbc84a4b935adfaf87a6c69, type: 2}
     text: Sure have George! Thank you.
   options:
   - optionText: Tell me more
