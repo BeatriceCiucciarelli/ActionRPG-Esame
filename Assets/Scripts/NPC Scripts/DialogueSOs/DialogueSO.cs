@@ -5,6 +5,12 @@ public class DialogueSO : ScriptableObject
 {
     public DialogueLine[] lines;
     public DialogueOption[] options;
+
+    [Header("Conditional Requirements (Optional)")]
+    public ActorSO[] requiredNPCs;
+
+    //Items
+    //Locations
 }
 
 [System.Serializable]
