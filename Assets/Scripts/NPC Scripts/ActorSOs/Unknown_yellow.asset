@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8623298fec03f714ba2d369577080777, type: 3}
-  m_Name: Unknown_yellow
+  m_Name: Unknown_Yellow
   m_EditorClassIdentifier: 
   actorName: ???
   portrait: {fileID: 418994962, guid: ce57b0305f5a9cf4db953144c7c3ac13, type: 3}
