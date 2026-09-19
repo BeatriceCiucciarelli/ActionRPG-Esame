@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: YellowGeorge_WontTalkToYou
   m_EditorClassIdentifier: 
   lines:
-  - speaker: {fileID: 11400000, guid: 7572b05250417f74eb817380a24b4f58, type: 2}
+  - speaker: {fileID: 11400000, guid: cf89752cbd3d5884180e963d3f96bbf7, type: 2}
     text: I won't talk to you find my brother Purple.
   options: []
   requiredNPCs:
   - {fileID: 11400000, guid: ebc8bb78146e9ba4aa3118b7d51ee0ef, type: 2}
+  requiredLocations: []

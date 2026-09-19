@@ -38,9 +38,10 @@ public class NPC_Talk : MonoBehaviour
         {
             if (DialogueManager.Instance.isDialogueActive)
                 DialogueManager.Instance.AdvanceDialogue();
-            else
+            else{
                 CheckForNewConversation();
                 DialogueManager.Instance.StartDialogue(currentConversation);
+            }
         }
     }
 

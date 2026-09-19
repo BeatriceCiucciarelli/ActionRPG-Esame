@@ -8,9 +8,6 @@ public class DialogueHistoryTracker : MonoBehaviour
 
     private readonly HashSet<ActorSO> spokenNPCs = new HashSet<ActorSO>();
 
-    
-
-
     private void Awake()
     {
         if (Instance != null)

@@ -7,8 +7,6 @@ public class DialogueSO : ScriptableObject
     public DialogueOption[] options;
 
 
-
-
     [Header("Conditional Requirements (Optional)")]
 
     public ActorSO[] requiredNPCs;
