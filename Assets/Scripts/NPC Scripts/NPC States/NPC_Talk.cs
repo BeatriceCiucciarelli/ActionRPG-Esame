@@ -7,7 +7,8 @@ public class NPC_Talk : MonoBehaviour
     private Rigidbody2D rb;
     private Animator anim;
     public Animator interactAnim;
-    public DialogueSO dialogueSO;
+    public DialogueSO currentConversation;
+    public List<DialogueSO> conversations;
 
 
     private void Awake()
@@ -38,7 +39,21 @@ public class NPC_Talk : MonoBehaviour
             if (DialogueManager.Instance.isDialogueActive)
                 DialogueManager.Instance.AdvanceDialogue();
             else
-                DialogueManager.Instance.StartDialogue(dialogueSO);
+                CheckForNewConversation();
+                DialogueManager.Instance.StartDialogue(currentConversation);
+        }
+    }
+
+    private void CheckForNewConversation()
+    {
+        for (int i = 0; i < conversations.Count; i++)
+        {
+            var convo= conversations[i];
+            if(convo != null && convo.IsConditionMet())
+            {
+                conversations.RemoveAt(i);
+                currentConversation = convo;
+            }
         }
     }
 
