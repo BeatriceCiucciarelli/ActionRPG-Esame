@@ -8,6 +8,7 @@ public class DialogueSO : ScriptableObject
 
 
 
+
     [Header("Conditional Requirements (Optional)")]
 
     public ActorSO[] requiredNPCs;
@@ -44,6 +45,7 @@ public class DialogueSO : ScriptableObject
 
         return true;
     }
+
 }
 
 [System.Serializable]
