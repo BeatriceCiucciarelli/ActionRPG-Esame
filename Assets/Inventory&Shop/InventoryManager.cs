@@ -7,12 +7,26 @@ using Unity.VisualScripting;
 
 public class InventoryManager : MonoBehaviour
 {
+    public static InventoryManager Instance;
+    
     public GameObject lootPrefab;
     public Transform player;
     public UseItem useItem;
     public int gold;
     public TMP_Text goldText;
     public InventorySlot[] itemSlots;
+
+    private void Awake()            //  QUI
+    {
+        if (Instance ==null)
+        {
+            Instance=this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else {
+            Destroy(gameObject);
+        }
+    }
 
 private void Start()
     {
@@ -115,6 +129,16 @@ public void DropItem(InventorySlot slot)
             }
             slot.UpdateUI();
         }
+    }
+
+    public bool HasItem(ItemSO itemSO)      // <-- void diventa bool
+    {
+        foreach (var slot in itemSlots)
+        {
+            if(slot.itemSO==itemSO && slot.quantity>0)
+                return true;
+        }
+        return false;
     }
 
    

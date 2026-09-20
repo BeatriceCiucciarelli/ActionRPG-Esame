@@ -70,6 +70,7 @@ public class NPC_Wander : MonoBehaviour
 
     public void OnCollisionEnter2D(Collision2D collision)
     {
+        if(!enabled) return;
         StartCoroutine(PauseAndPickNewDestination());
     }
 

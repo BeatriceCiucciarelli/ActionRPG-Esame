@@ -10,12 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 24af97e9c052f8a4894b142dfa8e4941, type: 3}
-  m_Name: RedGeorge_FoundEveryone
+  m_Name: RedGeorge_Quest_FindBrothers & StillNeedsYellow
   m_EditorClassIdentifier: 
   lines:
   - speaker: {fileID: 11400000, guid: 027200893a7ad2841bcef7a53ac0c47b, type: 2}
-    text: You've found all of my brothers! You are truly a hero.
+    text: I see you've found Purple George! Pleas find Yellow as well.
   options: []
   requiredNPCs:
   - {fileID: 11400000, guid: ebc8bb78146e9ba4aa3118b7d51ee0ef, type: 2}
-  - {fileID: 11400000, guid: 7e0489141676d1f4da2d155014f39a10, type: 2}

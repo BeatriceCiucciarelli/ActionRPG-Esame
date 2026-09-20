@@ -10,12 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 24af97e9c052f8a4894b142dfa8e4941, type: 3}
-  m_Name: YellowGeorge_Greeting
+  m_Name: RedGeorge_Default_Greeting
   m_EditorClassIdentifier: 
   lines:
-  - speaker: {fileID: 11400000, guid: d1177a857f0719b44a3ca532fa050bc4, type: 2}
-    text: Hey, I'm Yellow George!
+  - speaker: {fileID: 11400000, guid: 027200893a7ad2841bcef7a53ac0c47b, type: 2}
+    text: Greetings!
   options: []
-  requiredNPCs:
-  - {fileID: 11400000, guid: ebc8bb78146e9ba4aa3118b7d51ee0ef, type: 2}
+  requiredNPCs: []
   requiredLocations: []
+  requiredItems: []
+  removeAfterPlay: 0
+  removeTheseOnPlay: []
