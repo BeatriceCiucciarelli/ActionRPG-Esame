@@ -24,5 +24,5 @@ public class QuestObjective
     public LocationSO targetLocation=> target as LocationSO;
 
     public int requiredAmount;
-    public int currentAmount;
+
 }

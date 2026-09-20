@@ -142,4 +142,17 @@ public void DropItem(InventorySlot slot)
     }
 
    
+    public int GetItemQuantity(ItemSO itemSO)
+    {
+        int total = 0;
+
+        foreach (var slot in itemSlots)
+        {
+            if (slot.itemSO == itemSO)
+                total += slot.quantity;
+        }
+
+        return total;
+    }
+
 }
