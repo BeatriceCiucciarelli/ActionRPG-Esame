@@ -283,6 +283,7 @@ GameObject:
   - component: {fileID: 1341948131720434894}
   - component: {fileID: 6332469368243616440}
   - component: {fileID: 267748258312477507}
+  - component: {fileID: 1898994911337397069}
   m_Layer: 5
   m_Name: QuestSlot
   m_TagString: Untagged
@@ -392,7 +393,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1341948131720434894}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1898994911337397069}
+        m_TargetAssemblyTypeName: QuestLogSlot, Assembly-CSharp
+        m_MethodName: OnSlotClicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &267748258312477507
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -419,3 +432,19 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!114 &1898994911337397069
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8267622602626730462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f63e961600142a5479d8d05b9defdedf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questNameText: {fileID: 1376894951115426511}
+  questLevelText: {fileID: 2896554808948536318}
+  currentQuest: {fileID: 0}
+  questLogUI: {fileID: 0}

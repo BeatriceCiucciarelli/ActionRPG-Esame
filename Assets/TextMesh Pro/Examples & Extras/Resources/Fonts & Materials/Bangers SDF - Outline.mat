@@ -27,6 +27,7 @@ Material:
     m_TexEnvs: []
     m_Ints: []
     m_Floats:
+    - _OutlineWidth: 0.054
     - _ScaleRatioA: 0.90909094
     - _UnderlayOffsetX: -0.76
     - _UnderlayOffsetY: -0.48
