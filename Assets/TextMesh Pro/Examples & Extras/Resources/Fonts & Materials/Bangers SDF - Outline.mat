@@ -27,12 +27,12 @@ Material:
     m_TexEnvs: []
     m_Ints: []
     m_Floats:
-    - _OutlineWidth: 0.054
+    - _OutlineWidth: 0.349
     - _ScaleRatioA: 0.90909094
     - _UnderlayOffsetX: -0.76
     - _UnderlayOffsetY: -0.48
     - _UnderlaySoftness: 0
     m_Colors:
-    - _OutlineColor: {r: 1.9094338, g: 1.8986257, b: 1.8986257, a: 1}
+    - _OutlineColor: {r: 0, g: 0, b: 0, a: 1}
     - _UnderlayColor: {r: 0, g: 0, b: 0, a: 0.5019608}
   m_BuildTextureStacks: []
