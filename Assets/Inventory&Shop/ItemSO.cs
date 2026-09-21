@@ -8,10 +8,11 @@ public class ItemSO : ScriptableObject
     public string itemName;
     [TextArea] public string itemDescription;
     public Sprite icon;
-    public int stackSize = 3;
 
     public bool isGold;
-
+    public bool isEXP;
+    public int stackSize = 3;
+    
     [Header("Stats")]
     public int currentHealth;
     public int maxHealth;
