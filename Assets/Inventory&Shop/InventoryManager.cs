@@ -16,6 +16,8 @@ public class InventoryManager : MonoBehaviour
     public TMP_Text goldText;
     public InventorySlot[] itemSlots;
 
+    public static Action<int> OnExperienceGained;
+
     private void Awake()            //  QUI
     {
         if (Instance ==null)
@@ -56,8 +58,16 @@ private void Start()
         {
             gold += quantity;
             goldText.text = gold.ToString();
+            return;
         }
-  else{
+
+        if (itemSO.isEXP)
+        { 
+            
+            OnExperienceGained?.Invoke(quantity);
+            return;
+        }
+  //else{
 
         foreach( var slot in itemSlots)
         {
@@ -94,7 +104,7 @@ private void Start()
             if(quantity>0)
             DropLoot(itemSO,quantity);
            
-  }
+ // }
     }
 
 public void DropItem(InventorySlot slot)

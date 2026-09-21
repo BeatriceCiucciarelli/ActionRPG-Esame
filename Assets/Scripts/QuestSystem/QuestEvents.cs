@@ -6,4 +6,9 @@ using System;
 public class QuestEvents : MonoBehaviour
 {
     public static Action<QuestSO> OnQuestOfferRequested;
+    public static Action<QuestSO> OnQuestTurnInRequested;
+    
+    public static Func<QuestSO, bool> IsQuestComplete;
+
+    
 }

@@ -13,6 +13,9 @@ public class QuestLogUI : MonoBehaviour
 
     private QuestSO questSO;
 
+    [SerializeField] private QuestSO noAvailableQuetsSO;
+    [SerializeField] private QuestLogSlot[] questSlots;
+
     [SerializeField] private CanvasGroup questCanvas;
 
     [SerializeField] private CanvasGroup acceptCanvasGroup;
@@ -23,21 +26,69 @@ public class QuestLogUI : MonoBehaviour
     private void OnEnable()
     {
         QuestEvents.OnQuestOfferRequested += ShowQuestOffer;
+        QuestEvents.OnQuestTurnInRequested += ShowQuestTurnIn;
     }
 
     private void OnDisable()
     {
         QuestEvents.OnQuestOfferRequested -= ShowQuestOffer;
+        QuestEvents.OnQuestTurnInRequested -= ShowQuestTurnIn;
     }
 
     public void ShowQuestOffer(QuestSO incomingQuestSO)
     {
-        HandleQuestClicked(incomingQuestSO);
+        if (questManager.IsQuestAccepted(incomingQuestSO) ||questManager.GetCompleteQuest(incomingQuestSO) )
+        {
+            questSO = noAvailableQuetsSO;
+            SetCanvasState(acceptCanvasGroup, false);
+            SetCanvasState(declineCanvasGroup, true);
+            SetCanvasState(completeCanvasGroup, false);
+        }
+        else
+        {
+            questSO  = incomingQuestSO;
+            SetCanvasState(acceptCanvasGroup, true);
+            SetCanvasState(declineCanvasGroup, true);
+            SetCanvasState(completeCanvasGroup, false);
+        }
+        HandleQuestClicked(questSO);
 
         SetCanvasState(questCanvas, true);
+    }
 
-        SetCanvasState(acceptCanvasGroup, true);
-        SetCanvasState(declineCanvasGroup, true);
+    public void ShowQuestTurnIn(QuestSO incomingQuestSO)
+    {
+       questSO = incomingQuestSO;
+
+       HandleQuestClicked(questSO);
+
+       SetCanvasState(completeCanvasGroup, true);
+       SetCanvasState(acceptCanvasGroup, false);
+       SetCanvasState(declineCanvasGroup, false);
+       SetCanvasState(questCanvas,true); 
+    }
+
+    public void OnAcceptQuestClicked()
+    {
+        questManager.AcceptQuest(questSO);
+        SetCanvasState(completeCanvasGroup, false);
+        SetCanvasState(acceptCanvasGroup, false);
+        SetCanvasState(declineCanvasGroup, false);
+        RefreshQuestList();
+        HandleQuestClicked(noAvailableQuetsSO);
+    }
+
+    public void OnDeclineQuestClicked()
+    {
+        SetCanvasState(questCanvas, false);
+    }
+
+    public void OnCompleteQuestClicked()
+    {
+        questManager.CompleteQuest(questSO);
+
+        RefreshQuestList();
+        HandleQuestClicked(noAvailableQuetsSO);
         SetCanvasState(completeCanvasGroup, false);
     }
 
@@ -47,6 +98,24 @@ public class QuestLogUI : MonoBehaviour
         group.alpha = activate ? 1 : 0;
         group.blocksRaycasts = activate;
         group.interactable = activate;
+    }
+
+    public void RefreshQuestList()
+    {
+        List<QuestSO> activeQuests = questManager.GetActiveQuests();
+
+        for (int i = 0; i < questSlots.Length; i++)
+        {
+            if(i < activeQuests.Count)
+            {
+                questSlots[i].SetQuest(activeQuests[i]);
+            }
+
+            else
+            {
+                questSlots[i].ClearSlot();
+            }
+        }
     }
 
     public void HandleQuestClicked(QuestSO questSO)

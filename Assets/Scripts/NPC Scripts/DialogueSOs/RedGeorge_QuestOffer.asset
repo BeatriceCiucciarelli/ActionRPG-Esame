@@ -10,11 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 24af97e9c052f8a4894b142dfa8e4941, type: 3}
-  m_Name: YellowGeorge_WontTalkToYou
+  m_Name: RedGeorge_QuestOffer
   m_EditorClassIdentifier: 
   lines:
-  - speaker: {fileID: 11400000, guid: cf89752cbd3d5884180e963d3f96bbf7, type: 2}
-    text: I won't talk to you find my brother Purple.
+  - speaker: {fileID: 11400000, guid: 027200893a7ad2841bcef7a53ac0c47b, type: 2}
+    text: You Seem like a nice guy!
   options: []
+  offerQuestOnEnd: {fileID: 11400000, guid: 06ca8d5217b66f7498ebcf83d083055f, type: 2}
   requiredNPCs: []
-  requiredLocations: []
+  requiredLocations:
+  - {fileID: 11400000, guid: 0481eda75da95b34fa3ea4396c93f462, type: 2}
+  requiredItems: []
+  removeAfterPlay: 0
+  removeTheseOnPlay: []

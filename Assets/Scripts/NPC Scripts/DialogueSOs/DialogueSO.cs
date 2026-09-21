@@ -7,7 +7,9 @@ public class DialogueSO : ScriptableObject
     public DialogueLine[] lines;
     public DialogueOption[] options;
 
-
+    [Header("Quest Offer (Optional)")]
+    public QuestSO offerQuestOnEnd;
+    
     [Header("Conditional Requirements (Optional)")]
 
     public ActorSO[] requiredNPCs;
@@ -73,4 +75,5 @@ public class DialogueOption
 {
     public string optionText;
     public DialogueSO nextDialogue; 
+    public QuestSO offerQuest;
 }
