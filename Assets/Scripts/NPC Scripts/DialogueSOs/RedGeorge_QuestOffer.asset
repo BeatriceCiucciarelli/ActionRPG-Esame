@@ -14,10 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lines:
   - speaker: {fileID: 11400000, guid: 027200893a7ad2841bcef7a53ac0c47b, type: 2}
-    text: "Hello, Night Runner! The village is in trouble\u2026 for days the goblins
-      have been coming down from the mountains and robbing the village"
+    text: "Hello, Knight! The village is in trouble\u2026 for days the goblins have
+      been coming down from the mountains and robbing the village"
   - speaker: {fileID: 11400000, guid: 027200893a7ad2841bcef7a53ac0c47b, type: 2}
-    text: We need supplies. Gather 3 pumpkins in the forest, please help us.
+    text: Gather 3 pumpkins in the forest, we need supplies. Then hand the quest
+      in to the Monk.
   options: []
   offerQuestOnEnd: {fileID: 11400000, guid: a7c1dcf7153e7ea40af73cf5fb202c59, type: 2}
   requiredNPCs: []

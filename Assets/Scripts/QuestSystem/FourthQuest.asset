@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: FourthQuest
   m_EditorClassIdentifier: 
   questName: The Goblin King
-  questDescription: 'Red George reveals the truth: the goblins are coming from the
-    castle to the northwest. Reach it and defeat their King to free the realm.'
+  questDescription: 'Red George reveals the truth: The evil comes from the black
+    castle to the north-west. Reach it and defeat the Goblin King to free the kingdom.'
   questLevel: 4
   objectives:
   - description: Defeat the Enemy

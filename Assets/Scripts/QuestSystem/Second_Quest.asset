@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: Second_Quest
   m_EditorClassIdentifier: 
   questName: 'Second Quest: the Supplies'
-  questDescription: "\u201CRed George has explained the situation. Gather 3 pumpkins
-    in the forest to help the village."
+  questDescription: "Red George explained the situation. Gather 3 pumpkins in the
+    forest and hand the quest in to the Monk. Then go talk to Purple George \u2014
+    he's desperate."
   questLevel: 2
   objectives:
   - description: Talk to Red George

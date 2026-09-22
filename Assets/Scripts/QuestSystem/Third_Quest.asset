@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: Third_Quest
   m_EditorClassIdentifier: 
   questName: 'Third Quest: Purple Village'
-  questDescription: 'Purple George begs you: the goblins are raiding his village
-    to the north! Reach him beyond the forest and free the Purple Village.'
+  questDescription: "Purple George's village is under attack to the north. Reach
+    it beyond the village, fight off the goblins, and hand the quest in to the Monk.
+    Then return to Red George \u2014 he knows something important."
   questLevel: 3
   objectives:
   - description: Talk to Purple George

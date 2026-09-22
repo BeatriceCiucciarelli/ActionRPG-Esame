@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lines:
   - speaker: {fileID: 11400000, guid: ebc8bb78146e9ba4aa3118b7d51ee0ef, type: 2}
-    text: Help me, please! The goblins are raiding and destroying my village!
+    text: Please, help me! The goblins are raiding my village!
   - speaker: {fileID: 11400000, guid: ebc8bb78146e9ba4aa3118b7d51ee0ef, type: 2}
-    text: "It\u2019s to the north, beyond the forest. Hurry, before it\u2019s too
-      late!"
+    text: It's to the north, beyond the forest. Free it, then hand the quest in to
+      the Monk.
   options: []
   offerQuestOnEnd: {fileID: 11400000, guid: a95412eb050d77844a76b455493a2d52, type: 2}
   requiredNPCs: []
