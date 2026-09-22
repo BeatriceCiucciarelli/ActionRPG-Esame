@@ -10,11 +10,13 @@ public class QuestManager : MonoBehaviour
     public void OnEnable()
     {
         QuestEvents.IsQuestComplete += IsQuestComplete;
+        QuestEvents.GetCompletableQuest += GetCompletableQuest;
     }
 
     public void OnDisable()
     {
         QuestEvents.IsQuestComplete -= IsQuestComplete;
+        QuestEvents.GetCompletableQuest -= GetCompletableQuest;
     }
    
     
@@ -59,6 +61,16 @@ public class QuestManager : MonoBehaviour
         }
 
         return true;
+    }
+
+    public QuestSO GetCompletableQuest()
+    {
+        foreach (var quest in questProgress.Keys)
+        {
+            if (IsQuestComplete(quest))
+                return quest;
+        }
+        return null;
     }
 
     public void  CompleteQuest(QuestSO questSO)

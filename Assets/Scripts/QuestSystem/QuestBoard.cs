@@ -13,18 +13,16 @@ public class QuestBoard : MonoBehaviour
     {
         if (playerInRange && Input.GetButtonDown("Interact"))
         {
+            QuestSO completable = QuestEvents.GetCompletableQuest?.Invoke();
 
-            bool canTurnIn = questToTurnIn != null && QuestEvents.IsQuestComplete?.Invoke(questToTurnIn)==true;
-           
-            if (canTurnIn)
+            if (completable != null)
             {
-                QuestEvents.OnQuestTurnInRequested?.Invoke(questToTurnIn);
+                QuestEvents.OnQuestTurnInRequested?.Invoke(completable);
             }
-            else
+            else if (questToOffer != null)
             {
-               QuestEvents.OnQuestOfferRequested?.Invoke(questToOffer); 
+                QuestEvents.OnQuestOfferRequested?.Invoke(questToOffer);
             }
-            
         }
     }
 

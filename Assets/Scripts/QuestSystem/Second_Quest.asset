@@ -13,13 +13,13 @@ MonoBehaviour:
   m_Name: Second_Quest
   m_EditorClassIdentifier: 
   questName: 'Second Quest: the Supplies'
-  questDescription: "\u201CTalk to Red George to understand what\u2019s going on,
-    then gather 3 pumpkins in the forest."
+  questDescription: "\u201CRed George has explained the situation. Gather 3 pumpkins
+    in the forest to help the village."
   questLevel: 2
   objectives:
   - description: Talk to Red George
     target: {fileID: 11400000, guid: 027200893a7ad2841bcef7a53ac0c47b, type: 2}
-    requiredAmount: 0
+    requiredAmount: 1
   - description: Collect 3 pumpkins
     target: {fileID: 11400000, guid: 49c66f1c94d039946b7325ae94d52c01, type: 2}
     requiredAmount: 3

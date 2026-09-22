@@ -9,6 +9,6 @@ public class QuestEvents : MonoBehaviour
     public static Action<QuestSO> OnQuestTurnInRequested;
     
     public static Func<QuestSO, bool> IsQuestComplete;
-
+    public static Func<QuestSO> GetCompletableQuest;   
     
 }

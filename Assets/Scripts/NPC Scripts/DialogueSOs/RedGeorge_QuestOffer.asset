@@ -14,12 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lines:
   - speaker: {fileID: 11400000, guid: 027200893a7ad2841bcef7a53ac0c47b, type: 2}
-    text: You Seem like a nice guy!
+    text: "Hello, Night Runner! The village is in trouble\u2026 for days the goblins
+      have been coming down from the mountains and robbing the village"
+  - speaker: {fileID: 11400000, guid: 027200893a7ad2841bcef7a53ac0c47b, type: 2}
+    text: We need supplies. Gather 3 pumpkins in the forest, please help us.
   options: []
-  offerQuestOnEnd: {fileID: 11400000, guid: 06ca8d5217b66f7498ebcf83d083055f, type: 2}
+  offerQuestOnEnd: {fileID: 11400000, guid: a7c1dcf7153e7ea40af73cf5fb202c59, type: 2}
   requiredNPCs: []
   requiredLocations:
-  - {fileID: 11400000, guid: 0481eda75da95b34fa3ea4396c93f462, type: 2}
+  - {fileID: 11400000, guid: 0f8109afab0b41f44a5ff890603f3a37, type: 2}
   requiredItems: []
   removeAfterPlay: 0
   removeTheseOnPlay: []
