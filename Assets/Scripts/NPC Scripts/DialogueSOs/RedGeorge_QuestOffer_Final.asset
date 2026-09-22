@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24af97e9c052f8a4894b142dfa8e4941, type: 3}
+  m_Name: RedGeorge_QuestOffer_Final
+  m_EditorClassIdentifier: 
+  lines:
+  - speaker: {fileID: 11400000, guid: 027200893a7ad2841bcef7a53ac0c47b, type: 2}
+    text: "You saved my cousin\u2019s village\u2026 but that\u2019s not enough."
+  - speaker: {fileID: 11400000, guid: 027200893a7ad2841bcef7a53ac0c47b, type: 2}
+    text: "The evil comes from the Black Castle, to the northwest. That\u2019s where
+      the Goblin King rules.\n"
+  - speaker: {fileID: 11400000, guid: 027200893a7ad2841bcef7a53ac0c47b, type: 2}
+    text: Only you can stop him. Go, and free our realm!
+  options: []
+  offerQuestOnEnd: {fileID: 11400000, guid: aee172b76bd3ed74ebe325556f2c104d, type: 2}
+  requiredNPCs: []
+  requiredLocations:
+  - {fileID: 11400000, guid: 512e3b7391e811c479f9f12659c41e53, type: 2}
+  requiredItems: []
+  removeAfterPlay: 0
+  removeTheseOnPlay: []

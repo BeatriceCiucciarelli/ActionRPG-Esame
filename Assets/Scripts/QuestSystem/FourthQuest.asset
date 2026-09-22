@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42c3f822d5a726c4ba5d10b7f625e478, type: 3}
+  m_Name: FourthQuest
+  m_EditorClassIdentifier: 
+  questName: The Goblin King
+  questDescription: 'Red George reveals the truth: the goblins are coming from the
+    castle to the northwest. Reach it and defeat their King to free the realm.'
+  questLevel: 4
+  objectives:
+  - description: Defeat the Enemy
+    target: {fileID: 11400000, guid: d9d7a5fe5de27da4bae0cb5f3abbdb34, type: 2}
+    requiredAmount: 1
+  rewards:
+  - itemSO: {fileID: 11400000, guid: 09303254da6f8f3478f3ffab1581a2e9, type: 2}
+    quantity: 1
