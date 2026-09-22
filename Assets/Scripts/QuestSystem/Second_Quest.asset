@@ -12,16 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42c3f822d5a726c4ba5d10b7f625e478, type: 3}
   m_Name: Second_Quest
   m_EditorClassIdentifier: 
-  questName: 'Second Quest: the Pumpkin'
-  questDescription: 
-  questLevel: 3
+  questName: 'Second Quest: the Supplies'
+  questDescription: "\u201CTalk to Red George to understand what\u2019s going on,
+    then gather 3 pumpkins in the forest."
+  questLevel: 2
   objectives:
-  - description: Find a Pumpkin
-    target: {fileID: 11400000, guid: 49c66f1c94d039946b7325ae94d52c01, type: 2}
-    requiredAmount: 4
-  - description: Find Yellow George
-    target: {fileID: 11400000, guid: d1177a857f0719b44a3ca532fa050bc4, type: 2}
+  - description: Talk to Red George
+    target: {fileID: 11400000, guid: 027200893a7ad2841bcef7a53ac0c47b, type: 2}
     requiredAmount: 0
+  - description: Collect 3 pumpkins
+    target: {fileID: 11400000, guid: 49c66f1c94d039946b7325ae94d52c01, type: 2}
+    requiredAmount: 3
   rewards:
   - itemSO: {fileID: 11400000, guid: 09303254da6f8f3478f3ffab1581a2e9, type: 2}
-    quantity: 5
+    quantity: 30

@@ -13,23 +13,18 @@ MonoBehaviour:
   m_Name: First_Quest
   m_EditorClassIdentifier: 
   questName: 'First Quest: the Start'
-  questDescription: Start visiting the map and collect the first objects. Red George
-    is your friend, find him!
-  questLevel: 99
+  questDescription: The Monk needs you. Gather 3 mushrooms in the forest, discover
+    and visit the Yellow Village, then return to him.
+  questLevel: 1
   objectives:
   - description: Collect 3 Mushrooms
     target: {fileID: 11400000, guid: 6cc75974ca4df4c4c963685a98aa53dc, type: 2}
     requiredAmount: 3
-  - description: Visit The Green Hill
-    target: {fileID: 11400000, guid: 0481eda75da95b34fa3ea4396c93f462, type: 2}
-    requiredAmount: 1
-  - description: Return to RedGeorge
-    target: {fileID: 11400000, guid: 027200893a7ad2841bcef7a53ac0c47b, type: 2}
+  - description: Visit the Yellow Village
+    target: {fileID: 11400000, guid: 0f8109afab0b41f44a5ff890603f3a37, type: 2}
     requiredAmount: 1
   rewards:
-  - itemSO: {fileID: 11400000, guid: d28a0aa9d5cfc404fbde39751ffe278c, type: 2}
-    quantity: 10
   - itemSO: {fileID: 11400000, guid: 09303254da6f8f3478f3ffab1581a2e9, type: 2}
-    quantity: 5
-  - itemSO: {fileID: 11400000, guid: 49c66f1c94d039946b7325ae94d52c01, type: 2}
-    quantity: 5
+    quantity: 50
+  - itemSO: {fileID: 11400000, guid: 35026e58e81e7ef4bba29ce953cb43b7, type: 2}
+    quantity: 1
