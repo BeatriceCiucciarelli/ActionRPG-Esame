@@ -16,7 +16,7 @@ MonoBehaviour:
   questDescription: "Red George explained the situation. Gather 3 pumpkins in the
     forest and hand the quest in to the Monk. Then go talk to Purple George \u2014
     he's desperate."
-  questLevel: 2
+  questLevel: 1
   objectives:
   - description: Talk to Red George
     target: {fileID: 11400000, guid: 027200893a7ad2841bcef7a53ac0c47b, type: 2}

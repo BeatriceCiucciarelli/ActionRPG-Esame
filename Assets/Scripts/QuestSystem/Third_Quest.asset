@@ -16,7 +16,7 @@ MonoBehaviour:
   questDescription: "Purple George's village is under attack to the north. Reach
     it beyond the village, fight off the goblins, and hand the quest in to the Monk.
     Then return to Red George \u2014 he knows something important."
-  questLevel: 3
+  questLevel: 2
   objectives:
   - description: Talk to Purple George
     target: {fileID: 11400000, guid: ebc8bb78146e9ba4aa3118b7d51ee0ef, type: 2}

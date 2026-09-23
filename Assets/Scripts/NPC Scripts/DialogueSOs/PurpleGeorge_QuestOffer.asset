@@ -20,9 +20,9 @@ MonoBehaviour:
       the Monk.
   options: []
   offerQuestOnEnd: {fileID: 11400000, guid: a95412eb050d77844a76b455493a2d52, type: 2}
-  requiredNPCs: []
-  requiredLocations:
-  - {fileID: 11400000, guid: 512e3b7391e811c479f9f12659c41e53, type: 2}
+  requiredNPCs:
+  - {fileID: 11400000, guid: 027200893a7ad2841bcef7a53ac0c47b, type: 2}
+  requiredLocations: []
   requiredItems: []
   removeAfterPlay: 0
   removeTheseOnPlay: []

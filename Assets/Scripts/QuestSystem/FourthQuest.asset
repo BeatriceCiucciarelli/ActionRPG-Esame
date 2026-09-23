@@ -15,7 +15,7 @@ MonoBehaviour:
   questName: The Goblin King
   questDescription: 'Red George reveals the truth: The evil comes from the black
     castle to the north-west. Reach it and defeat the Goblin King to free the kingdom.'
-  questLevel: 4
+  questLevel: 3
   objectives:
   - description: Defeat the Enemy
     target: {fileID: 11400000, guid: d9d7a5fe5de27da4bae0cb5f3abbdb34, type: 2}
