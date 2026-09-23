@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: First_Quest
   m_EditorClassIdentifier: 
   questName: 'First Quest: the Start'
-  questDescription: "The village needs your help. Gather 3 mushrooms in the eastern
-    forest and take a look around the village. Then come back to me. Once you're
-    done with this quest, look for Red George \u2014 he needs a hand."
+  questDescription: The village needs your help. Gather 3 mushrooms in the eastern
+    forest and take a look around the village. Then look for Red George and come
+    back to me .
   questLevel: 0
   objectives:
   - description: Collect 3 Mushrooms

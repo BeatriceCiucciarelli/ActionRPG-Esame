@@ -4789,7 +4789,7 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7886050656552307893}
   m_Enabled: 1
-  m_Alpha: 0
+  m_Alpha: 1
   m_Interactable: 1
   m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
@@ -8718,7 +8718,7 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: ad6ee5fd93c9853448ae035e7404e63a, type: 2}
     - target: {fileID: 2896554808948536318, guid: 06ebed941c5b3074db7ff9cd8d54224b, type: 3}
       propertyPath: m_text
-      value: Lv. 99
+      value: Lv. 0
       objectReference: {fileID: 0}
     - target: {fileID: 5013372130854167382, guid: 06ebed941c5b3074db7ff9cd8d54224b, type: 3}
       propertyPath: m_AnchorMax.y
@@ -10561,7 +10561,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1376894951115426511, guid: 06ebed941c5b3074db7ff9cd8d54224b, type: 3}
       propertyPath: m_text
-      value: 'Second Quest: the Pumpkin'
+      value: 'Second Quest: the Supplies'
       objectReference: {fileID: 0}
     - target: {fileID: 1376894951115426511, guid: 06ebed941c5b3074db7ff9cd8d54224b, type: 3}
       propertyPath: m_fontSize
@@ -10581,7 +10581,7 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: a7c1dcf7153e7ea40af73cf5fb202c59, type: 2}
     - target: {fileID: 2896554808948536318, guid: 06ebed941c5b3074db7ff9cd8d54224b, type: 3}
       propertyPath: m_text
-      value: Lv. 3
+      value: Lv. 2
       objectReference: {fileID: 0}
     - target: {fileID: 5013372130854167382, guid: 06ebed941c5b3074db7ff9cd8d54224b, type: 3}
       propertyPath: m_AnchorMax.y
